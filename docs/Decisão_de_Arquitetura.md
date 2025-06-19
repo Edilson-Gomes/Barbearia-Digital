@@ -11,8 +11,36 @@ Optamos por utilizar uma **arquitetura monolítica modular**, desenvolvida com o
 - A modularidade permitirá evoluir o sistema sem comprometer a organização do código.
 - LiteSQL é leve e suficiente para o escopo inicial do sistema.
 
+### Estrutura Modular 
+
+---
+
+```
+app/  
+└── Modules/  
+    ├── Clientes/  
+    │   ├── Http/  
+    │   │   └── Controllers/  
+    │   ├── Models/  
+    │   ├── Views/  
+    │   ├── Services/  
+    │   └── routes.php  
+    ├── Agendamentos/  
+    │   ├── Http/  
+    │   ├── Models/  
+    │   └── routes.php  
+    ├── Profissionais/  
+    │   ├── Http/  
+    │   ├── Models/  
+    │   └── ...  
+    ├── Financeiro/  
+    │   └── ...  
+    └── Auth/  
+        └── ...
+```
+---
+        
 ## Próximos Passos
-- Estruturar os módulos e definir convenções.
 - Criar diretrizes de desenvolvimento e documentação técnica.
 
 ---
