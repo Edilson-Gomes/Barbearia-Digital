@@ -1,11 +1,11 @@
 <?php
 
-namespace Src\App\Modules\Clientes\Http\Controllers;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Src\App\Modules\Clientes\Services\ClienteService;
+use App\Services\ClienteService;
 
-class ClienteController extends Controller {
+class ClienteController extends Controller
+{
     protected ClienteService $clienteService;
     public function __construct(ClienteService $clienteService) {
         $this->clienteService = $clienteService;
@@ -16,5 +16,4 @@ class ClienteController extends Controller {
     function store(){
         $this->clienteService->store();
     }
-
 }

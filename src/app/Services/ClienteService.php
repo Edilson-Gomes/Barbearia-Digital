@@ -1,9 +1,9 @@
 <?php
 
-namespace Src\App\Modules\Clientes\Services;
+namespace App\Services;
 
 use Illuminate\Http\Request;
-use Src\App\Modules\Clientes\Models\Cliente;
+use App\Models\Cliente;
 
 class ClienteService{
     protected $request;
@@ -11,7 +11,7 @@ class ClienteService{
         $this->request = $request;
     }
     function create(){
-        return view('Modules.Clientes.Views.cliente');
+        return view('clientes.cliente');
     }
     function store(){
         $cliente = new Cliente;
@@ -22,7 +22,7 @@ class ClienteService{
         $cliente->data_nascimento = $this->request->input('data_nascimento');
         $cliente->save();
 
-        return redirect('/cliente')->with('msg', 'Cadastro realizado com sucesso!');
+        return redirect('cliente')->with('msg', 'Cadastro realizado com sucesso!');
     }
     
 }

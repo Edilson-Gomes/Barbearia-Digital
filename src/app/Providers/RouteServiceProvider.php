@@ -22,12 +22,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        foreach (File::allFiles(app_path('Modules')) as $file) {
-            if (Str::endsWith($file->getFilename(), 'routes.php')) {
-                require $file->getPathname();
-            }
-        }
+        // foreach (File::allFiles(app_path('Modules')) as $file) {
+        //     if (Str::endsWith($file->getFilename(), 'routes.php')) {
+        //         require $file->getPathname();
+        //     }
+        // }
 
-        parent::boot();
+        // parent::boot();
     }
 }
