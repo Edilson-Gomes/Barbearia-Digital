@@ -21,6 +21,7 @@
           <a href="#" class="hover:text-gray-400">Serviços</a>
           <a href="#" class="hover:text-gray-400">Sobre</a>
           <a href="cliente" class="hover:text-gray-400">Perfil</a>
+          <a href="cadastrar/cliente" class="hover:text-gray-400">Registro</a>
         </nav>
       </div>
     </header>

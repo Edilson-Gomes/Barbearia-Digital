@@ -11,7 +11,7 @@ class ClienteService{
         $this->request = $request;
     }
     function create(){
-        return view('clientes.cliente');
+        return view('clientes.clientecreate');
     }
     function store(){
         $cliente = new Cliente;

@@ -11,7 +11,7 @@
           <a href="#" class="hover:text-gray-400">Início</a>
           <a href="#" class="hover:text-gray-400">Meus Agendamentos</a>
           <a href="#" class="hover:text-gray-400">Perfil</a>
-          <a href="#" class="hover:text-gray-400">Sair</a>
+          <a href="/" class="hover:text-gray-400">Sair</a>
         </nav>
       </div>
     </header>
