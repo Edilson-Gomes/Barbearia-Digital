@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgendamentoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ Route::middleware('auth:cliente')->group(function (){
     Route::get('cliente', function () {
         return view('clientes.cliente');
     });
+    Route::get('agendamento', [AgendamentoController::class, 'create'])->name('agendamento_create');
+    Route::post('agendamento/store', [AgendamentoController::class, 'store'])->name('agendamento_store');
 });
 
 Route::get('cadastrar/cliente', [ClienteController::class, 'create']);

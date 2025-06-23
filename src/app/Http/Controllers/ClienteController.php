@@ -17,7 +17,4 @@ class ClienteController extends Controller
     function store(){
         return $this->clienteService->store();
     }
-    function login(){
-        return $this->clienteService->login();
-    }
 }

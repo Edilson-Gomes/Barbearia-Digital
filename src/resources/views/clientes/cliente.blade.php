@@ -2,19 +2,13 @@
 
 @section('conteudo')
 
+@if (session('msg'))
+    <div class="mb-4 text-red-600 text-sm text-center">
+      {{ session('msg') }}
+    </div>
+@endif
+
   <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    {{-- <header class="bg-black text-white py-6 shadow-md">
-      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Barbearia Digital</h1>
-        <nav class="space-x-4">
-          <a href="/" class="hover:text-gray-400">Início</a>
-          <a href="#" class="hover:text-gray-400">Meus Agendamentos</a>
-          <a href="#" class="hover:text-gray-400">Perfil</a>
-          <a href="/" class="hover:text-gray-400">Sair</a>
-        </nav>
-      </div>
-    </header> --}}
 
     <!-- Boas-vindas -->
     <section class="bg-white py-16">
