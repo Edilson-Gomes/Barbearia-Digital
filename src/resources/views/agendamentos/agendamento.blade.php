@@ -21,10 +21,10 @@
         <select id="servico" name="servico" required
           class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
           <option value="">Selecione um serviço</option>
-            <option value="corte">Corte Maculino</option>
-            <option value="barba_sobrancelha">Barba e Sobrancelha</option>
-            <option value="hidratacao">Hidratação</option>
-            <option value="massagem_capilar">Massagem Capilar</option>
+            <option value="Corte">Corte Maculino</option>
+            <option value="Barba_Sobrancelha">Barba e Sobrancelha</option>
+            <option value="Hidratacao">Hidratação</option>
+            <option value="Massagem_Capilar">Massagem Capilar</option>
         </select>
       </div>
 

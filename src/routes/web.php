@@ -21,6 +21,8 @@ Route::middleware('auth:cliente')->group(function (){
     });
     Route::get('agendamento', [AgendamentoController::class, 'create'])->name('agendamento_create');
     Route::post('agendamento/store', [AgendamentoController::class, 'store'])->name('agendamento_store');
+    Route::get('agendamentos', [AgendamentoController::class, 'index'])->name('agendamentos');
+    Route::delete('agendamento/{id}', [AgendamentoController::class, 'destroy'])->name('agendamento_destroy');
 });
 
 Route::get('cadastrar/cliente', [ClienteController::class, 'create']);
