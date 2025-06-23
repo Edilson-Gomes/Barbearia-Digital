@@ -12,26 +12,18 @@
   </head> --}}
 
   <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    <header class="bg-black text-white py-6 shadow-md">
-      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-3xl font-bold">Barbearia Digital</h1>
-        <nav class="space-x-4">
-          <a href="#" class="hover:text-gray-400">Início</a>
-          <a href="#" class="hover:text-gray-400">Serviços</a>
-          <a href="#" class="hover:text-gray-400">Sobre</a>
-          <a href="cliente" class="hover:text-gray-400">Perfil</a>
-          <a href="cadastrar/cliente" class="hover:text-gray-400">Registro</a>
-        </nav>
-      </div>
-    </header>
+    
 
     <!-- Hero -->
     <section class="bg-gray-200 py-20">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-4xl font-bold mb-4">Estilo é confiança</h2>
         <p class="text-lg text-gray-700 mb-6">Agende seu horário com os melhores profissionais da região.</p>
-        <a href="#" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Agendar agora</a>
+        @cliente
+        <a href="agendar" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Agendar agora</a>
+        @else
+        <a href="/login" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Agendar agora</a>
+        @endauth
       </div>
     </section>
 

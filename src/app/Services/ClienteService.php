@@ -18,6 +18,7 @@ class ClienteService{
         $cliente->nome = $this->request->input('nome');
         $cliente->telefone = $this->request->input('telefone');
         $cliente->email = $this->request->input('email');
+        $cliente->senha = bcrypt($this->request->input('senha'));
         $cliente->cpf = $this->request->input('cpf');
         $cliente->data_nascimento = $this->request->input('data_nascimento');
         $cliente->save();

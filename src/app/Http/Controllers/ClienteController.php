@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\ClienteService;
 
+
 class ClienteController extends Controller
 {
     protected ClienteService $clienteService;
@@ -11,9 +12,12 @@ class ClienteController extends Controller
         $this->clienteService = $clienteService;
     }
     function create(){
-        $this->clienteService->create();
+        return $this->clienteService->create();
     }
     function store(){
-        $this->clienteService->store();
+        return $this->clienteService->store();
+    }
+    function login(){
+        return $this->clienteService->login();
     }
 }
