@@ -12,8 +12,10 @@ class AgendamentoService {
     public function __construct(Request $request) {
         $this->request = $request;
     }
-    public function index(){
+    public function index()
+    {
         $cliente = Auth::guard('cliente')->user();
+
         $agendamentos = Agendamento::whereHas('profissional')
         ->where('cliente_id', $cliente->id ?? null)
         ->with('profissional')
@@ -23,11 +25,28 @@ class AgendamentoService {
 
         return view('agendamentos.meus_agendamentos', compact('agendamentos'));
     }
-    public function create() {
+    public function proximoAgendamento()
+    {
+        $cliente = Auth::guard('cliente')->user();
+
+        $agendamento = Agendamento::whereHas('profissional')
+            ->where('cliente_id', $cliente->id ?? null)
+            ->whereDate('data', '>=', now()->toDateString())
+            ->with('profissional')
+            ->orderBy('data', 'asc')
+            ->orderBy('horario', 'asc')
+            ->first(); // retorna só o mais próximo
+
+        return view('clientes.cliente', compact('agendamento'));
+    }
+
+    public function create() 
+    {
         $profissionais = Profissional::all();
         return view('agendamentos.agendamento', compact('profissionais'));
     }
-    public function store(){
+    public function store()
+    {
         $agendar = new Agendamento();
         $agendar->servico = $this->request->input('servico');
         $agendar->data = $this->request->input('data');
@@ -38,8 +57,8 @@ class AgendamentoService {
 
         return redirect('cliente')->with('msg', 'Agendamento registrado com sucesso!');
     }
-    public function destroy($id){
-        
+    public function destroy($id)
+    {
         $agendamento = Agendamento::findOrFail($id);
         
         if ($agendamento->cliente_id !== Auth::guard('cliente')->id()) {
@@ -47,6 +66,5 @@ class AgendamentoService {
         }
         $agendamento->delete();
         return redirect()->route('agendamentos')->with('msg', 'Agendamento cancelado com sucesso!');
-
     }
 }

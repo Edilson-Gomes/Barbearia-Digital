@@ -19,6 +19,7 @@ Route::middleware('auth:cliente')->group(function (){
     Route::get('cliente', function () {
         return view('clientes.cliente');
     });
+    Route::get('cliente', [AgendamentoController::class, 'proximoAgendamento'])->name('proximoAgendamento');
     Route::get('agendamento', [AgendamentoController::class, 'create'])->name('agendamento_create');
     Route::post('agendamento/store', [AgendamentoController::class, 'store'])->name('agendamento_store');
     Route::get('agendamentos', [AgendamentoController::class, 'index'])->name('agendamentos');
