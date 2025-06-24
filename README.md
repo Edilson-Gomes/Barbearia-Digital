@@ -37,6 +37,16 @@ Este projeto é uma aplicação web desenvolvida para gerenciar barbearias de ba
 3. **Configuração do ambiente**
    - Duplique o arquivo `.env.example` e renomeie para `.env`.
    - Configure variáveis como conexão com banco de dados, chave da aplicação e credenciais.
+      - #### Banco de Dados
+       ```
+      DB_DATABASE=seu_banco
+      DB_USERNAME=usuario
+      DB_PASSWORD=senha
+      ``` 
+      - #### Chave da aplicação e credenciais
+      ```
+      php artisan key:generate
+      ```
 
 4. **Crie a base de dados**
    - Execute as migrações, caso esteja usando um ORM:
