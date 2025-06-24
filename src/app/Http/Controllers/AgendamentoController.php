@@ -13,6 +13,9 @@ class AgendamentoController extends Controller
     public function index(){
         return $this->agendamentoService->index();
     }
+    public function proximoAgendamento(){
+        return $this->agendamentoService->proximoAgendamento();
+    }
     public function create(){
         return $this->agendamentoService->create();
     }

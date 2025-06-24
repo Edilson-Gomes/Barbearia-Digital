@@ -41,7 +41,7 @@ src/
 ```
 ---
 
-## 📘 Diretrizes de Desenvolvimento
+##  Diretrizes de Desenvolvimento
 
 ### 🔹 Organização do Projeto
 - **Controllers**: Camada responsável por orquestrar as requisições, validando dados e acionando os serviços necessários.
@@ -51,7 +51,7 @@ src/
 - **Providers**: Serviços auxiliares como autenticação, fila, notificações, etc.
 
 ### 🔹 Padrões de Código
-- Utilize **PSR-12** como guia de estilo para código PHP.
+- Utilize [**PSR-12**](https://www.php-fig.org/psr/psr-12/) como guia de estilo para código PHP.
 - Siga o padrão de **injeção de dependência** para promover testabilidade.
 - Nomeie arquivos e classes com clareza e coerência, como `AgendamentoService.php` ou `AgendamentoController.php`.
 
@@ -62,23 +62,23 @@ src/
 
 ---
 
-## 📚 Diretrizes de Documentação Técnica
+##  Diretrizes de Documentação Técnica
 
-### 📄 README Principal
+###  README Principal
 - Descrição do projeto, como rodar localmente, e estrutura geral das pastas.
 - Tecnologias utilizadas.
 - Contato e contribuição.
 
-### 🧩 Documentação por Módulo
+###  Documentação por Módulo
 Cada pasta principal (`Controllers`, `Services`, etc.) pode conter um `README.md` explicando:
 - Objetivo do módulo.
 - Dependências importantes.
 - Padrões e práticas recomendadas.
 
-### 📊 Diagramas (opcional)
+###  Diagramas (opcional)
 - Caso aplicável, inclua **diagramas de sequência**, **diagramas de fluxo de dados** ou um **diagrama de pastas** mostrando a modularização.
 
-### 🔐 Segurança e Boas Práticas
+###  Segurança e Boas Práticas
 - Trate todos os dados de entrada como não confiáveis.
 - Armazene senhas e tokens em variáveis de ambiente, nunca em código.
 

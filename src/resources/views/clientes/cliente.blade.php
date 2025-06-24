@@ -24,10 +24,20 @@
         <h3 class="text-2xl font-semibold mb-6">Próximo Agendamento</h3>
         <div class="bg-white rounded shadow p-6 flex items-center justify-between">
           <div>
-            <p class="text-lg font-medium">Corte + Barba</p>
-            <p class="text-gray-600">Quarta-feira, 25 de Junho às 15:00</p>
+            @if (is_null($agendamento))
+            <p class="text-center text-gray-600">Você ainda não tem agendamentos registrados.</p>
+            @else
+            <p class="text-lg font-medium">{{$agendamento->servico}}</p>
+            <p class="text-gray-600">{{$agendamento->data}} às {{$agendamento->horario}} | Profissional: {{ $agendamento->profissional->nome }}</p>
           </div>
-          <a href="#" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancelar</a>
+            <form action="{{ route('agendamento_destroy', $agendamento->id) }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
+                Cancelar
+              </button>
+            </form>
+            @endif        
         </div>
       </div>
     </section>
