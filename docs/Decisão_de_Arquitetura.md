@@ -16,26 +16,27 @@ Optamos por utilizar uma **arquitetura monolítica modular**, desenvolvida com o
 ---
 
 ```
-app/  
-└── Modules/  
-    ├── Clientes/  
-    │   ├── Http/  
-    │   │   └── Controllers/  
-    │   ├── Models/  
-    │   ├── Views/  
-    │   ├── Services/  
-    │   └── routes.php  
-    ├── Agendamentos/  
-    │   ├── Http/  
-    │   ├── Models/  
-    │   └── routes.php  
-    ├── Profissionais/  
-    │   ├── Http/  
-    │   ├── Models/  
+src/  
+└── app/  
+    ├── Http/  
+    │   └── Controllers/  
+    │       ├── AgendamentoController.php  
+    │       ├── ClienteController.php  
+    │       ├── LoginController.php  
+    │       └── ProfissionalController.php  
+    ├── Models/  
+    │   ├── Agendamento.php  
+    │   ├── Cliente.php  
+    │   └── Profissional.php  
+    ├── Services/  
+    │   ├── AgendamentoService.php  
+    │   ├── ClienteService.php  
+    │   └── ProfissionalService.php 
+    ├── Views/  
+    │   ├── Agendamentos/ 
+    │   ├── Clientes/  
     │   └── ...  
-    ├── Financeiro/  
-    │   └── ...  
-    └── Auth/  
+    └── Routes/  
         └── ...
 ```
 ---
