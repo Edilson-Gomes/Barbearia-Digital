@@ -1,0 +1,53 @@
+@startuml
+
+skinparam linetype ortho
+
+entity agendamentos {
+  * <u>id : int</u>
+  --
+  - servico : string
+  - data : date
+  - horario : time
+  * <u>profissional_id : int</u>
+  * <u>cliente_id : int</u>
+  + created_at : datetime
+  + updated_at : datetime
+}
+
+entity clientes {
+  * <u>id : int</u>
+  --
+  - nome : string
+  - telefone : string
+  - email : string
+  - senha : string
+  - cpf : string
+  - data_nascimento : date
+  + created_at : datetime
+  + updated_at : datetime
+}
+
+entity profissionais {
+  * <u>id : int</u>
+  --
+  - nome : string
+  - profissao : string
+  - disponivel : boolean
+  + created_at : datetime
+  + updated_at : datetime
+}
+
+entity historico_cliente {
+  * <u>id : int</u>
+  --
+  * <u>cliente_id : int</u>
+  - status : string
+  - data_modificacao : datetime
+  + created_at : datetime
+  + updated_at : datetime
+}
+
+agendamentos }o--o{ profissionais
+agendamentos }o--o| clientes
+historico_cliente |o--o| clientes
+@enduml

@@ -61,5 +61,8 @@
 
 ##  MER do Sistema
 
-_(Deixe seu espaço aqui para colar o modelo entidade-relacionamento)_  
+
+![MER](barbearia-digital\docs\diagramas\MER.png)
+
+
 
