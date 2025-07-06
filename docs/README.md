@@ -43,12 +43,15 @@ src/
 
 ##  Diretrizes de Desenvolvimento
 
-### 🔹 Organização do Projeto
-- **Controllers**: Camada responsável por orquestrar as requisições, validando dados e acionando os serviços necessários.
-- **Models**: Representam as entidades do sistema e contêm a lógica de acesso a dados.
-- **Views**: Camada de apresentação, especialmente se estiver usando algum template engine.
-- **Services**: Contêm a lógica de negócio central. Devem ser reutilizáveis e independentes de framework.
-- **Providers**: Serviços auxiliares como autenticação, fila, notificações, etc.
+### 🔹 Organização do Projeto  
+
+| **Modulos** | **Funcionalidades** |
+|-------------|---------------------|
+| **Controllers** | Camada responsável por orquestrar as requisições, validando dados e acionando os serviços necessários. |
+| **Models** | Representam as entidades do sistema e contêm a lógica de acesso a dados. |
+| **Views** | Camada de apresentação, especialmente se estiver usando algum template engine. |
+| **Services** | Contêm a lógica de negócio central. Devem ser reutilizáveis e independentes de framework. |
+| **Providers** | Serviços auxiliares como autenticação, fila, notificações, etc. |
 
 ### 🔹 Padrões de Código
 - Utilize [**PSR-12**](https://www.php-fig.org/psr/psr-12/) como guia de estilo para código PHP.
