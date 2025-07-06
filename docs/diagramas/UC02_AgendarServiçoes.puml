@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor Cliente
+actor Profissional
+actor Sistema
+
+usecase "RF02 - Agendar Serviço" as UC02
+
+Cliente --> UC02
+Sistema --> UC02 : Verificar disponibilidade
+Profissional --> UC02 : Validar horário disponível
+
+note right of UC02
+Entrada: serviço, data, horário, profissional
+Processamento: validação de horário, bloqueio de horários ocupados
+Saída: agendamento registrado com sucesso
+Restrição: profissional disponível, horário não ocupado
+Regra de Negócio: não permitir agendamentos duplicados no mesmo horário
+end note
+@enduml

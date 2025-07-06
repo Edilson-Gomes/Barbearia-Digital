@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Cliente
+actor Profissional
+actor Sistema
+
+package "Barbearia Digital" {
+  usecase "RF01 - Cadastrar Cliente" as UC01
+  usecase "RF02 - Agendar Serviço" as UC02
+  usecase "RF03 - Visualizar Agendamento" as UC03
+  usecase "Cancelar/Reagendar Agendamento" as UC04
+}
+
+Cliente --> UC01
+Cliente --> UC02
+Cliente --> UC03
+Cliente --> UC04
+
+Sistema --> UC02 : Verificar disponibilidade
+Profissional --> UC02 : Validar horário disponível
+
+UC02 --> UC04 : Alterações antes de 24h
+@enduml

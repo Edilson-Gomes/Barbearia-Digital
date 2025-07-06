@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Cliente
+
+usecase "RF03 - Visualizar Agendamento" as UC03
+
+Cliente --> UC03
+
+note right of UC03
+Entrada: cliente autenticado solicita seus agendamentos
+Processamento: recuperar agendamentos futuros e passados
+Saída: lista detalhada de agendamentos
+Restrição: cliente só acessa seus dados
+Regra de Negócio: reagendamento/cancelamento requer 24h de antecedência
+end note
+@enduml

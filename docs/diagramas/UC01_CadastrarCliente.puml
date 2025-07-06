@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Cliente
+
+usecase "RF01 - Cadastrar Cliente" as UC01
+
+Cliente --> UC01
+
+note right of UC01
+Entrada: nome, telefone, e-mail, CPF, data de nascimento
+Processamento: validação de campos e verificação de CPF duplicado
+Saída: cliente cadastrado com sucesso
+Restrição: CPF válido e único, e-mail válido
+Regra de Negócio: CPF único por cliente
+end note
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor Cliente
+
+usecase "RF04 - Reagendar ou Cancelar Serviço" as UC04
+
+Cliente --> UC04
+
+note right of UC04
+Entrada: cliente autenticado solicita reagendamento ou cancelamento
+Processamento:
+    - CANCELAMENTO, o sistema remove o agendamento e finaliza o processo.
+    - REAGENDAMENTO, o sistema remove o agendamento, o cliente registra nova data e horário.
+Saída: lista detalhada de agendamentos atualizada
+Restrição: cliente só pode reagendar ou cancelar com 24h de antecedência
+Regra de Negocio: reagendamento/cancelamento requer 24h de antecedência
+end note
+@enduml
